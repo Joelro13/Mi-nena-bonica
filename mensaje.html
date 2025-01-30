@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Regalo de San Valentín</title>
   <style>
+    /* Estilo global para asegurar que la página se vea bien en dispositivos móviles */
     body {
       background: linear-gradient(to bottom right, #f6d6d1, #d9a7c7); /* Fondo elegante con gradiente */
       color: #333;
@@ -21,11 +22,21 @@
       position: relative;
     }
 
+    /* Ajustar el tamaño del título */
     h1 {
-      font-size: 2.5rem;
+      font-size: 2rem;
       margin-bottom: 20px;
       color: #2f2f2f;
       text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para el texto */
+    }
+
+    /* Estilo del reproductor de música */
+    iframe {
+      width: 90%;  /* Se ajusta al 90% del ancho de la pantalla */
+      height: 300px;  /* Altura fija que se ve bien en dispositivos móviles */
+      margin-top: 20px;
+      border-radius: 10px;
+      border: none;
     }
 
     /* Estilo para el mensaje */
@@ -35,33 +46,14 @@
       left: 50%;
       transform: translateX(-50%);
       background-color: rgba(255, 255, 255, 0.8);
-      padding: 20px;
+      padding: 15px;
       border-radius: 12px;
-      max-width: 90%;
-      font-size: 1.2rem;
+      width: 90%;
+      font-size: 1rem;
       text-align: center;
       z-index: 10;
     }
 
-    iframe {
-      width: 80%;
-      height: 352px;
-      margin-top: 20px;
-      border-radius: 10px;
-    }
-
-  </style>
-</head>
-<body>
-  <!-- Reproductor de música -->
-  <iframe src="https://open.spotify.com/embed/track/1f3oAGS76ZIzOrsxcD2P36?utm_source=generator&theme=0" 
-    width="100%" height="352" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-  </iframe>
-
-  <!-- Mensaje debajo del reproductor -->
-  <div class="message-box">
-    Bueno nena, esto me ha costado lo mío pero he conseguido hacerlo con amor para ti porque te mereces detallitos como los míos que son los mejores. Solo decirte que estos días quiero verte todo el rato y ni quiero ser pesado, pero ¡fuaa quiero darte muchos besos ya!
-  </div>
-
-</body>
-</html>
+    /* Asegurarse de que el mensaje y el reproductor se vean bien en pantallas pequeñas */
+    @media (max-width: 375px) {  /* Establecemos para pantallas más pequeñas, como el iPhone 12 Mini */
+      iframe 
