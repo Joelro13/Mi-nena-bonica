@@ -17,10 +17,8 @@
       padding: 20px;
       height: 100vh;
       margin: 0;
-      overflow: hidden;
-      position: relative;
     }
-    
+
     h1 {
       font-size: 2.5rem;
       margin-bottom: 20px;
@@ -38,7 +36,7 @@
       cursor: pointer;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       transition: transform 0.3s ease;
-      animation: moveButton 1s infinite;
+      margin-bottom: 20px;
     }
 
     button:hover {
@@ -49,23 +47,24 @@
       transform: translateY(2px);
     }
 
-    @keyframes moveButton {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-      100% { transform: translateY(0); }
+    iframe {
+      border-radius: 12px;
+      width: 100%;
+      max-width: 400px;
+      height: 80px;
     }
   </style>
 </head>
 <body>
   <h1>Te quiero Sara 🖤</h1>
-  <button onclick="startMusicAndNavigate()">Púlsame pataditas</button>
-  <script>
-    function startMusicAndNavigate() {
-      // Abrir la música en una ventana nueva
-      window.open("player.html", "musicPlayer", "width=300,height=80");
-      // Ir a la siguiente página
-      window.location.href = "mensaje.html";
-    }
-  </script>
+  <button onclick="window.location.href='mensaje.html';">Púlsame pataditas</button>
+
+  <!-- Reproductor de Spotify -->
+  <iframe src="https://open.spotify.com/embed/track/1f3oAGS76ZIzOrsxcD2P36?utm_source=generator&theme=0" 
+    frameborder="0" 
+    allowfullscreen=""
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+    loading="lazy">
+  </iframe>
 </body>
 </html>
