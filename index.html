@@ -6,7 +6,7 @@
   <title>Regalo de San Valentín</title>
   <style>
     body {
-      background: linear-gradient(to bottom right, #f6d6d1, #d9a7c7); /* Fondo elegante con gradiente */
+      background: linear-gradient(to bottom right, #f6d6d1, #d9a7c7);
       color: #333;
       font-family: 'Arial', sans-serif;
       display: flex;
@@ -25,11 +25,11 @@
       font-size: 2.5rem;
       margin-bottom: 20px;
       color: #2f2f2f;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para el texto */
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     }
 
     button {
-      background-color: #f2b8b5; /* Botón con color suave */
+      background-color: #f2b8b5;
       color: white;
       font-size: 1.2rem;
       padding: 12px 24px;
@@ -38,68 +38,34 @@
       cursor: pointer;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       transition: transform 0.3s ease;
+      animation: moveButton 1s infinite;
     }
 
     button:hover {
-      transform: translateY(-5px); /* Hover: sube un poco */
+      transform: translateY(-5px);
     }
 
     button:active {
-      transform: translateY(2px); /* Efecto cuando presionas el botón */
+      transform: translateY(2px);
     }
 
-    /* Animación del botón */
     @keyframes moveButton {
-      0% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-10px); /* Mover hacia arriba */
-      }
-      100% {
-        transform: translateY(0);
-      }
-    }
-
-    .moving-button {
-      animation: moveButton 1s infinite; /* El botón se mueve arriba y abajo */
-    }
-    
-    p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      line-height: 1.6;
-      color: #444;
-    }
-
-    .karate-kid {
-      position: absolute;
-      width: 100px;
-    }
-
-    .top-left {
-      top: 10px;
-      left: 10px;
-    }
-
-    .bottom-right {
-      bottom: 10px;
-      right: 10px;
-    }
-
-    /* Estilo adicional para el iframe */
-    iframe {
-      margin-top: 40px; /* Separa el botón del reproductor */
-      border-radius: 10px;
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
     }
   </style>
 </head>
 <body>
   <h1>Te quiero Sara 🖤</h1>
-  <button class="moving-button" onclick="document.getElementById('soundcloud-player').src += '&auto_play=true';">¡Me recuerdas de algo?</button>
-  <iframe id="soundcloud-player" width="80%" height="80" scrolling="no" frameborder="no" 
-    src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/cero97428/lady-madrizzz&color=%23000000&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
-  </iframe>
+  <button onclick="startMusicAndNavigate()">Púlsame pataditas</button>
+  <script>
+    function startMusicAndNavigate() {
+      // Abrir la música en una ventana nueva
+      window.open("player.html", "musicPlayer", "width=300,height=80");
+      // Ir a la siguiente página
+      window.location.href = "mensaje.html";
+    }
+  </script>
 </body>
 </html>
-
