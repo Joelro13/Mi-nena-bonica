@@ -39,6 +39,11 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       transition: transform 0.3s ease;
     }
+     iframe {
+    margin-top: 40px; /* Separa el botón del reproductor */
+    border-radius: 10px;
+  }
+</style>
 
     button:hover {
       transform: translateY(-5px); /* Hover: sube un poco */
@@ -90,7 +95,7 @@
 </head>
 <body>
   <h1>Te quiero Sara 🖤</h1>
-  <button class="moving-button" onclick="window.location.href='mensaje.html'">Pulsame pataditas</button>
+ <button class="moving-button" onclick="window.open('mensaje.html', '_blank')">Púlsame pataditas</button>
 <iframe width="80%" height="80" scrolling="no" frameborder="no" 
   src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/cero97428/lady-madrizzz&color=%23000000&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
 </iframe>
