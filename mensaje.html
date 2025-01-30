@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Para ti amor</title>
+  <title>Mensaje de San Valentín</title>
   <style>
+    /* Fondo similar al de la primera página */
     body {
-      background: linear-gradient(to bottom right, #f6d6d1, #d9a7c7); /* Fondo elegante con gradiente */
+      background: linear-gradient(to bottom right, #f6d6d1, #d9a7c7);
       color: #333;
       font-family: 'Arial', sans-serif;
       display: flex;
@@ -15,78 +16,88 @@
       align-items: center;
       text-align: center;
       padding: 20px;
-      height: 100vh;
       margin: 0;
       overflow: hidden;
-      position: relative;
+      height: 100vh;
     }
 
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      color: #2f2f2f;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para el texto */
-    }
-
-    .message-box {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: rgba(255, 255, 255, 0.8);
-      padding: 20px;
-      border-radius: 12px;
-      max-width: 90%;
-      font-size: 1.2rem;
-      text-align: center;
-      z-index: 10; /* Asegura que esté encima del reproductor */
-    }
-
+    /* Reproductor de música en la esquina superior central */
     iframe {
-      width: 80%;
-      height: 352px;
-      margin-top: 20px;
+      width: 100%;
+      max-width: 400px;
+      height: 80px;
       border-radius: 10px;
+      margin-bottom: 30px;
+    }
+
+    /* Cuadro de mensaje */
+    .message-box {
+      background-color: #ffffff;
+      padding: 20px;
+      max-width: 400px;
+      width: 90%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-top: 30px;
+      color: #333;
+      text-align: center;
+      font-size: 1rem; /* Tamaño de fuente ajustado */
+      line-height: 1.4;
     }
 
     .arrow-button {
-      position: absolute;
-      top: 60%;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 1.2rem;
+      display: block;
+      margin: 20px auto 0;
+      font-size: 1.1rem;
       background-color: #f2b8b5;
       color: white;
       padding: 12px 24px;
       border: none;
-      border-radius: 10px;
+      border-radius: 50px;
       cursor: pointer;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
     }
 
     .arrow-button:hover {
-      transform: translateY(-5px); /* Hover: sube un poco */
+      transform: translateY(-5px);
     }
 
     .arrow-button:active {
-      transform: translateY(2px); /* Efecto cuando presionas el botón */
+      transform: translateY(2px);
     }
 
+    /* Media queries para móviles */
+    @media screen and (max-width: 600px) {
+      iframe {
+        width: 80%;
+        height: 60px;
+      }
+      .message-box {
+        width: 100%;
+        max-width: 350px;
+        padding: 15px;
+        font-size: 0.9rem; /* Reducir aún más el tamaño de la fuente */
+      }
+      .arrow-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+      }
+    }
   </style>
 </head>
 <body>
-  <!-- Cartel con el mensaje -->
+
+  <!-- Reproductor de Spotify -->
+  <iframe src="https://open.spotify.com/embed/track/1f3oAGS76ZIzOrsxcD2P36?utm_source=generator&theme=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+  <!-- Cuadro de mensaje -->
   <div class="message-box">
-    Ponla de mientras anda, creo que te recuerda a algo tonta
+    <p>Bueno nena, esto me ha costado lo mío pero he conseguido hacerlo con amor para ti porque te mereces detallitos como los míos que son los mejores. Solo decirte que estos días quiero verte todo el rato y ni quiero ser pesado, pero ¡fuaa quiero darte muchos besos ya! Es que cariño, eres preciosa. Estoy muy orgulloso de ti y de nosotros por cómo seguimos adelante siempre. Pero bueno, no me enrollo más. Solo recordarte lo mucho que me importas y que siempre me vas a tener para ayudarte en cualquier cosa de la vida, porque lo que me hace feliz es verte feliz. Te amo. ❤️</p>
   </div>
 
-  <!-- Reproductor de música -->
-  <iframe src="https://open.spotify.com/embed/track/1f3oAGS76ZIzOrsxcD2P36?utm_source=generator&theme=0" 
-    width="100%" height="352" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-  </iframe>
-
-  <!-- Botón de flecha -->
-  <button class="arrow-button" onclick="window.location.href='mensaje.html'">Siguiente</button>
+  <!-- Flecha para regresar -->
+  <button class="arrow-button" onclick="window.history.back()">Ponla de mientras anda, creo que te recuerda a algo tonta</button>
 
 </body>
 </html>
