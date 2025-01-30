@@ -33,36 +33,32 @@
       max-width: 600px;
       line-height: 1.6;
       color: #444;
+      margin-bottom: 40px; /* Agregamos espacio debajo del mensaje para que no se mezcle con la flecha */
     }
 
     .message {
       font-size: 1.5rem;
       color: #2f2f2f;
-      margin-top: 40px;
     }
 
     /* Estilo del reproductor */
     .spotify-player {
-      position: fixed;
-      top: 20px;
-      right: 20px;
       width: 450px;  /* Aumenté el ancho del reproductor */
       height: 80px;  /* Ajusté la altura para hacerlo más bajo */
       border-radius: 10px;
+      margin-bottom: 20px; /* Agregué margen abajo para separar el reproductor del cuadro de la flecha */
     }
 
     /* Estilo de la flecha y el texto */
     .arrow-text {
-      position: absolute;
-      top: 5px; /* Ajusté la posición de la flecha hacia arriba */
-      right: 20px;
       background-color: #f2b8b5;
       color: white;
-      font-size: 1.2rem;
-      padding: 12px 24px;
+      font-size: 1rem;
+      padding: 12px 0; /* Ajusté el tamaño vertical para que el cuadro se vea igual al reproductor */
+      width: 450px; /* Ancho igual al reproductor */
+      text-align: center;
       border-radius: 10px;
-      display: flex;
-      align-items: center;
+      display: inline-block;
       cursor: pointer;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       transition: transform 0.3s ease;
@@ -79,18 +75,18 @@
     .arrow-text::before {
       content: "↑"; /* Flecha hacia arriba */
       margin-right: 10px;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
     }
   </style>
 </head>
 <body>
-  <h1>¡Te quiero muchísimo, Sara! </h1>
-  <p class="message">Bueno nena, esto me ha costado lo mío pero he conseguido hacerlo con amor para ti porque te mereces detallitos como los míos que son los mejores. Solo decirte que estos días quiero verte todo el rato y no quiero ser pesado, pero ¡fuaa quiero darte muchos besos ya! Es que cariño, eres preciosa. Estoy muy orgulloso de ti y de nosotros por cómo seguimos adelante siempre. Pero bueno, no me enrollo más, espero que esta sorpresita acmopañada de unas cosas de chocolate te encanten ehh. Solo recordarte lo mucho que me importas y que siempre me vas a tener para ayudarte en cualquier cosa de la vida, porque lo que me hace feliz es verte feliz. Te amo. ❤</p>
+  <h1>Para la mejor karateca de todas </h1>
+  <p class="message">Bueno nena, esto me ha costado lo mío pero he conseguido hacerlo con amor para ti porque te mereces detallitos como los míos que son los mejores. Solo decirte que estos días quiero verte todo el rato y ni quiero ser pesado, pero ¡fuaa quiero darte muchos besos ya! Es que cariño, eres preciosa. Estoy muy orgulloso de ti y de nosotros por cómo seguimos adelante siempre. Pero bueno, no me enrollo más. Solo recordarte lo mucho que me importas y que siempre me vas a tener para ayudarte en cualquier cosa de la vida, porque lo que me hace feliz es verte feliz. Te amo. ❤️</p>
 
-  <!-- Reproductor de Spotify centrado en la esquina -->
+  <!-- Reproductor de Spotify centrado -->
   <iframe class="spotify-player" src="https://open.spotify.com/embed/track/1f3oAGS76ZIzOrsxcD2P36?utm_source=generator&theme=0" width="100%" height="352" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
-  <!-- Flecha con texto al lado -->
+  <!-- Flecha con texto debajo del reproductor, de igual tamaño -->
   <div class="arrow-text">
     Ponla de mientras anda, creo que te recuerda a algo tonta
   </div>
